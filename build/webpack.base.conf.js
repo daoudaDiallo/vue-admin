@@ -1,66 +1,72 @@
-var path = require('path')
-var config = require('../config')
-var utils = require('./utils')
-var projectRoot = path.resolve(__dirname, '../')
+'use strict'
+
+const path = require('path')
+const config = require('../config')
+const utils = require('./utils')
+const projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: ['./client/index.js'],
+    // If you want to support IE < 11, should add `babel-polyfill` to vendor.
+    // e.g. ['babel-polyfill', 'vue', 'vue-router', 'vuex']
+    vendor: [
+      'vue',
+      'vue-router',
+      'vuex',
+      'vuex-router-sync'
+    ]
   },
   output: {
     path: config.build.assetsRoot,
-    publicPath: config.build.assetsPublicPath,
+    publicPath: process.env.NODE_ENV === 'production'
+      ? config.build.assetsPublicPath
+      : config.dev.assetsPublicPath,
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.js', '.vue'],
-    fallback: [path.join(__dirname, '../node_modules')],
+    extensions: ['.js', '.vue', '.css', '.json'],
     alias: {
-      'src': path.resolve(__dirname, '../src'),
-      'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components')
+      // https://github.com/vuejs/vue/wiki/Vue-2.0-RC-Starter-Resources
+      // vue: 'vue/dist/vue',
+      package: path.resolve(__dirname, '../package.json'),
+      src: path.resolve(__dirname, '../client'),
+      assets: path.resolve(__dirname, '../client/assets'),
+      components: path.resolve(__dirname, '../client/components'),
+      views: path.resolve(__dirname, '../client/views'),
+      // third-party
+      'plotly.js': 'plotly.js/dist/plotly',
+      // vue-addon
+      'vuex-store': path.resolve(__dirname, '../client/store')
     }
   },
-  resolveLoader: {
-    fallback: [path.join(__dirname, '../node_modules')]
-  },
   module: {
-    preLoaders: [
-      {
-        test: /\.vue$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
-      },
-      {
-        test: /\.js$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
-      }
-    ],
     loaders: [
       {
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        include: projectRoot,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        }
+      },
+      {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue-loader',
+        options: require('./vue-loader.conf')
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         include: projectRoot,
-        exclude: /node_modules/
-      },
-      {
-        test: /\.json$/,
-        loader: 'json'
-      },
-      {
-        test: /\.html$/,
-        loader: 'vue-html'
+        // /node_modules\/(?!vue-bulma-.*)/
+        exclude: [new RegExp(`node_modules\\${path.sep}(?!vue-bulma-.*)`)]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url',
+        loader: 'url-loader',
         query: {
           limit: 10000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
@@ -68,7 +74,7 @@ module.exports = {
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url',
+        loader: 'url-loader',
         query: {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
@@ -76,10 +82,8 @@ module.exports = {
       }
     ]
   },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
-  },
-  vue: {
-    loaders: utils.cssLoaders()
+  // See https://github.com/webpack/webpack/issues/3486
+  performance: {
+    hints: false
   }
 }
