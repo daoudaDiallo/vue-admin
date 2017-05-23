@@ -1,0 +1,12 @@
+.slider {
+  .frame li {
+    height: 130px;
+  }
+
+  &.js_rewind {
+    .frame li {
+      color: #000;
+      background: whitesmoke;
+    }
+  }
+}

@@ -14,33 +14,33 @@ export default {
     {
       name: 'Chartist',
       path: 'chartist',
-      component: lazyLoading('charts/Chartist'),
+      component: lazyLoading('charts/chartist/Chartist'),
       meta: {
-        link: 'charts/Chartist.vue'
+        link: 'charts/chartist/Chartist.vue'
       }
     },
     {
       name: 'Chartjs',
       path: 'chartjs',
-      component: lazyLoading('charts/Chartjs'),
+      component: lazyLoading('charts/chartjs/Chartjs'),
       meta: {
-        link: 'charts/Chartjs.vue'
+        link: 'charts/chartjs/Chartjs.vue'
       }
     },
     {
       name: 'Peity',
       path: 'peity',
-      component: lazyLoading('charts/Peity'),
+      component: lazyLoading('charts/peity/Peity'),
       meta: {
-        link: 'charts/Peity.vue'
+        link: 'charts/peity/Peity.vue'
       }
     },
     {
       name: 'Plotly',
       path: 'plotly',
-      component: lazyLoading('charts/Plotly'),
+      component: lazyLoading('charts/plotly/Plotly'),
       meta: {
-        link: 'charts/Plotly.vue'
+        link: 'charts/plotly/Plotly.vue'
       }
     }
   ]

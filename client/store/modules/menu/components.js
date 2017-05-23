@@ -24,9 +24,9 @@ export default {
       meta: {
         description: 'Jump component is based on jump.js',
         repository: 'https://github.com/vue-bulma/jump',
-        link: 'components/BackToTop.vue'
+        link: 'components/backToTop/BackToTop.vue'
       },
-      component: lazyLoading('components/BackToTop')
+      component: lazyLoading('components/backToTop/BackToTop')
     },
     {
       name: 'Brace',
@@ -34,9 +34,9 @@ export default {
       meta: {
         description: 'Code editor component that based on brace',
         repository: 'https://github.com/vue-bulma/brace',
-        link: 'components/Brace.vue'
+        link: 'components/brace/Brace.vue'
       },
-      component: lazyLoading('components/Brace')
+      component: lazyLoading('components/brace/Brace')
     },
     {
       name: 'Collapse',
@@ -44,9 +44,9 @@ export default {
       meta: {
         description: 'Collapse component',
         repository: 'https://github.com/vue-bulma/collapse',
-        link: 'components/Collapse.vue'
+        link: 'components/collapse/Collapse.vue'
       },
-      component: lazyLoading('components/Collapse')
+      component: lazyLoading('components/collapse/Collapse')
     },
     {
       name: 'Datepicker',
@@ -54,9 +54,9 @@ export default {
       meta: {
         description: 'Datepicker component is based on flatpickr',
         repository: 'https://github.com/vue-bulma/datepicker',
-        link: 'components/Datepicker.vue'
+        link: 'components/datepicker/Datepicker.vue'
       },
-      component: lazyLoading('components/Datepicker')
+      component: lazyLoading('components/datepicker/Datepicker')
     },
     {
       name: 'Emoji',
@@ -64,9 +64,9 @@ export default {
       meta: {
         description: 'Emoji Component is based on emojione.com',
         repository: 'https://github.com/vue-bulma/emoji',
-        link: 'components/Emoji.vue'
+        link: 'components/emoji/Emoji.vue'
       },
-      component: lazyLoading('components/Emoji')
+      component: lazyLoading('components/emoji/Emoji')
     },
     {
       name: 'Message',
@@ -74,9 +74,9 @@ export default {
       meta: {
         description: 'Message component',
         repository: 'https://github.com/vue-bulma/message',
-        link: 'components/Message.vue'
+        link: 'components/message/Message.vue'
       },
-      component: lazyLoading('components/Message')
+      component: lazyLoading('components/message/Message')
     },
     {
       name: 'Modal',
@@ -84,9 +84,9 @@ export default {
       meta: {
         description: 'Modal component',
         repository: 'https://github.com/vue-bulma/modal',
-        link: 'components/Modal.vue'
+        link: 'components/modal/Modal.vue'
       },
-      component: lazyLoading('components/Modal')
+      component: lazyLoading('components/modal/Modal')
     },
     {
       name: 'Notification',
@@ -94,9 +94,9 @@ export default {
       meta: {
         description: 'Notification component',
         repository: 'https://github.com/vue-bulma/notification',
-        link: 'components/Notification.vue'
+        link: 'components/notification/Notification.vue'
       },
-      component: lazyLoading('components/Notification')
+      component: lazyLoading('components/notification/Notification')
     },
     {
       name: 'ProgressBar',
@@ -104,9 +104,9 @@ export default {
       meta: {
         description: 'ProgressBar component',
         repository: 'https://github.com/vue-bulma/progress-bar',
-        link: 'components/ProgressBar.vue'
+        link: 'components/progressbar/ProgressBar.vue'
       },
-      component: lazyLoading('components/ProgressBar')
+      component: lazyLoading('components/progressbar/ProgressBar')
     },
     {
       name: 'ProgressTracker',
@@ -114,9 +114,9 @@ export default {
       meta: {
         description: 'ProgressTracker component is based on progress-tracker',
         repository: 'https://github.com/vue-bulma/progress-tracker',
-        link: 'components/ProgressTracker.vue'
+        link: 'components/progresstracker/ProgressTracker.vue'
       },
-      component: lazyLoading('components/ProgressTracker')
+      component: lazyLoading('components/progresstracker/ProgressTracker')
     },
     {
       name: 'Quill',
@@ -124,9 +124,9 @@ export default {
       meta: {
         description: 'Your powerful, rich text editor',
         repository: 'https://github.com/vue-bulma/quill',
-        link: 'components/Quill.vue'
+        link: 'components/quill/Quill.vue'
       },
-      component: lazyLoading('components/Quill')
+      component: lazyLoading('components/quill/Quill')
     },
     {
       name: 'Rating',
@@ -134,9 +134,9 @@ export default {
       meta: {
         description: 'Rating component is based on starability.css',
         repository: 'https://github.com/vue-bulma/rating',
-        link: 'components/Rating.vue'
+        link: 'components/rating/Rating.vue'
       },
-      component: lazyLoading('components/Rating')
+      component: lazyLoading('components/rating/Rating')
     },
     {
       name: 'Slider',
@@ -144,9 +144,9 @@ export default {
       meta: {
         description: 'Slider component',
         repository: 'https://github.com/vue-bulma/slider',
-        link: 'components/Slider.vue'
+        link: 'components/slider/Slider.vue'
       },
-      component: lazyLoading('components/Slider')
+      component: lazyLoading('components/slider/Slider')
     },
     {
       name: 'Switch',
@@ -154,9 +154,9 @@ export default {
       meta: {
         description: 'Switch component',
         repository: 'https://github.com/vue-bulma/switch',
-        link: 'components/Switch.vue'
+        link: 'components/switch/Switch.vue'
       },
-      component: lazyLoading('components/Switch')
+      component: lazyLoading('components/switch/Switch')
     },
     {
       name: 'Tabs',
@@ -164,9 +164,9 @@ export default {
       meta: {
         description: 'Tabs component',
         repository: 'https://github.com/vue-bulma/tabs',
-        link: 'components/Tabs.vue'
+        link: 'components/tabs/Tabs.vue'
       },
-      component: lazyLoading('components/Tabs')
+      component: lazyLoading('components/tabs/Tabs')
     },
     {
       name: 'Tooltip',
@@ -174,9 +174,9 @@ export default {
       meta: {
         description: 'Tooltip component is based on hint.css',
         repository: 'https://github.com/vue-bulma/tooltip',
-        link: 'components/Tooltip.vue'
+        link: 'components/tooltip/Tooltip.vue'
       },
-      component: lazyLoading('components/Tooltip')
+      component: lazyLoading('components/tooltip/Tooltip')
     },
     {
       name: 'Lory',
@@ -184,9 +184,9 @@ export default {
       meta: {
         description: 'Slider component is based on lory, lory: ☀ Touch enabled minimalistic slider',
         repository: 'https://github.com/vue-bulma/lory',
-        link: 'components/Lory.vue'
+        link: 'components/lory/Lory.vue'
       },
-      component: lazyLoading('components/Lory')
+      component: lazyLoading('components/lory/Lory')
     }
   ]
 }

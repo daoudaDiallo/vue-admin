@@ -12,33 +12,33 @@ export default {
       name: 'Buttons',
       path: '/buttons',
       meta: {
-        link: 'ui/Buttons.vue'
+        link: 'ui/buttons/Buttons.vue'
       },
-      component: lazyLoading('ui/Buttons')
+      component: lazyLoading('ui/buttons/Buttons')
     },
     {
       name: 'Form',
       path: '/form',
       meta: {
-        link: 'ui/Form.vue'
+        link: 'ui/form/Form.vue'
       },
-      component: lazyLoading('ui/Form')
+      component: lazyLoading('ui/form/Form')
     },
     {
       name: 'Typography',
       path: '/typography',
       meta: {
-        link: 'ui/Typography.vue'
+        link: 'ui/typography/Typography.vue'
       },
-      component: lazyLoading('ui/Typography')
+      component: lazyLoading('ui/typography/Typography')
     },
     {
       name: 'Icons',
       path: '/icons',
       meta: {
-        link: 'ui/Icons.vue'
+        link: 'ui/icons/Icons.vue'
       },
-      component: lazyLoading('ui/Icons')
+      component: lazyLoading('ui/icons/Icons')
     }
   ]
 }
